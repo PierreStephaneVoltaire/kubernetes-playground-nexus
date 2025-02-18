@@ -13,6 +13,15 @@ spec:
       values: |
         service:
           type: LoadBalancer
+        tolerations:
+          - key: "dedicated"
+            operator: "Equal"
+            value: "nexus"
+            effect: "NO_SCHEDULE"  
+        nexus:
+          nodeSelector:
+            role: nexus
+        
         persistence:
           enabled: true
           storageClass: gp3
