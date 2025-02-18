@@ -17,7 +17,7 @@ spec:
           - key: "dedicated"
             operator: "Equal"
             value: "nexus"
-            effect: "NO_SCHEDULE"  
+            effect: "NoSchedule"  
         nexus:
           nodeSelector:
             role: nexus
